@@ -478,6 +478,52 @@
 
       <div class="project-card">
         <div class="project-badge">
+          <!-- Shield/check icon -->
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          Personal Project
+        </div>
+
+        <h3>Piste — Agentic Fact-Checking Pipeline for Political Discourse</h3>
+
+        <p>
+          <strong>Piste</strong> (French for "trail") is an end-to-end <strong>agentic AI pipeline</strong> that
+          fact-checks political claims and leaves a complete, replayable forensic audit trail behind every verdict.
+          It is configured out of the box to fact-check <strong>Québec political discourse in French</strong> and
+          <strong>Canadian federal political discourse in English</strong>, with a fully bilingual EN/FR flow across
+          the UI, pipeline stages, retrieved sources, verdict labels, and natural-language explanations.
+        </p>
+
+        <p>
+          The pipeline runs as four cooperating agent stages — check-worthiness and atomic claim decomposition,
+          <strong>blind</strong> multi-provider web retrieval (the retriever never sees the original claim, eliminating
+          confirmation bias by design), per-source classification executed concurrently, and a 7-way
+          PolitiFact-aligned verdict aggregator with a criticality gate for high-stakes claims.
+          Every agent call, every source, and every classification is written to an <strong>append-only audit ledger</strong>
+          in PostgreSQL, so any historical verdict can be replayed and compared side-by-side against the current pipeline.
+        </p>
+
+        <div class="project-tags">
+          <span class="project-tag t1">Agentic AI</span>
+          <span class="project-tag t2">Fact-Checking Pipeline</span>
+          <span class="project-tag t3">Bilingual EN / FR</span>
+          <span class="project-tag t4">Québec &amp; Canada Politics</span>
+          <span class="project-tag t5">Blind Retrieval</span>
+          <span class="project-tag t6">Immutable Audit Trail</span>
+          <span class="project-tag t1">FastAPI</span>
+          <span class="project-tag t2">PostgreSQL</span>
+        </div>
+
+        <a class="project-cta"
+           href="https://github.com/jinan-kordab/piste"
+           target="_blank"
+           rel="noopener noreferrer">
+          Explore the project on GitHub
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-badge">
           <!-- Plane icon -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19 4s-2 2-3.5 3.5L7 5.3l-1.9 1.9 7.1 3.4L9.5 14 8 14l-2 2 3.5.5.5 3.5L12 18l0-1.5 3.7-2.7 3.4 7.1z"/></svg>
           Personal Project
