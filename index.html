@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jinan Kordab | Senior Full‑Stack Developer</title>
   <meta name="description" content="Portfolio of Jinan Kordab — Senior Full‑Stack Developer specializing in .NET, microservices, DevSecOps, and Agentic AI." />
+  <script>
+    (function(){
+      try {
+        var l = localStorage.getItem('lang') || 'en';
+        document.documentElement.setAttribute('data-lang', l);
+      } catch(e){ document.documentElement.setAttribute('data-lang','en'); }
+    })();
+  </script>
   
   
   <style>
@@ -398,13 +406,54 @@
     .project-cta svg{transition: transform 0.2s ease;}
     .project-cta:hover svg{transform: translateX(3px);}
 
+    /* =============================================
+       BILINGUAL TOGGLE (EN / FR)
+       ============================================= */
+    html[data-lang="en"] [lang="fr"]{display:none !important;}
+    html[data-lang="fr"] [lang="en"]{display:none !important;}
+    .lang-toggle{
+      display:flex;justify-content:flex-end;gap:8px;
+      max-width:980px;
+      margin:0 auto;
+      padding:14px 20px 0 20px;
+    }
+    .lang-toggle button{
+      font-family:inherit;
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:0.05em;
+      padding:6px 16px;
+      border:2px solid var(--saffron);
+      border-radius:999px;
+      background:transparent;
+      color:var(--saffron);
+      cursor:pointer;
+      transition:all 0.2s ease;
+    }
+    .lang-toggle button:hover{
+      background:linear-gradient(135deg, var(--saffron), var(--turmeric));
+      color:#fff;
+    }
+    .lang-toggle button.active{
+      background:linear-gradient(135deg, var(--vermilion), var(--saffron));
+      color:#fff;
+      border-color:var(--vermilion);
+      box-shadow:0 2px 10px rgba(226,61,40,0.3);
+    }
+
 </style>
 </head>
 <body>
+  <div class="lang-toggle" role="group" aria-label="Language switcher">
+    <button type="button" data-lang="en" class="active"><strong>EN</strong></button>
+    <button type="button" data-lang="fr"><strong>FR</strong></button>
+  </div>
+
   <div class="wrap">
     <header>
       <h1 class="name">Jinan Kordab</h1>
-      <p class="title">Senior Full‑Stack Developer (AI / Agentic AI) • Montreal, QC</p>
+      <p class="title" lang="en">Senior Full‑Stack Developer (AI / Agentic AI) • Montreal, QC</p>
+      <p class="title" lang="fr">Développeur Full‑Stack Senior (IA / IA Agentique) • Montréal, QC</p>
       <div class="meta">
         <span class="pill"><a href="https://github.com/jinan-kordab" target="_blank" rel="noreferrer">GitHub</a></span>
         <span class="pill"><a href="https://www.linkedin.com/in/jinankordab/" target="_blank" rel="noreferrer">LinkedIn</a></span>
@@ -412,60 +461,106 @@
     </header>
 
     <section>
-      <h2>About</h2>
+      <h2 lang="en">About</h2>
+      <h2 lang="fr">À propos</h2>
       <div class="lead">
-        <p><strong>Senior</strong> full‑stack developer with 15+ years of experience and 3+ years in technical leadership, focused on scalable .NET services, secure API platforms, and practical GenAI/Agentic AI delivery.</p>
+        <p lang="en"><strong>Senior</strong> full‑stack developer with 15+ years of experience and 3+ years in technical leadership, focused on scalable .NET services, secure API platforms, and practical GenAI/Agentic AI delivery.</p>
+        <p lang="fr"><strong>Développeur</strong> full‑stack senior avec plus de 15 ans d'expérience et plus de 3 ans en leadership technique. Spécialisé dans les services .NET évolutifs, les plateformes d'API sécurisées et la livraison concrète de solutions GenAI et d'IA agentique.</p>
       </div>
     </section>
 
     <section>
-      <h2>Skills</h2>
+      <h2 lang="en">Skills</h2>
+      <h2 lang="fr">Compétences</h2>
       <div class="grid">
-        <div class="card"><p><span style="color:var(--ink);font-weight:600;">Backend</span>: C#, .NET (8/7/6), ASP.NET Core APIs, Entity Framework, NHibernate, LINQ</p></div>
-        <div class="card"><p><span style="color:var(--ink);font-weight:600;">Data</span>: SQL Server, Azure SQL, PostgreSQL, MongoDB</p></div>
-        <div class="card"><p><span style="color:var(--ink);font-weight:600;">Architecture</span>: Microservices, event‑driven patterns, domain‑driven design, API‑led integration</p></div>
-        <div class="card"><p><span style="color:var(--ink);font-weight:600;">DevOps</span>: Azure DevOps, CI/CD (YAML), Git, Docker, Linux</p></div>
-        <div class="card"><p><span style="color:var(--ink);font-weight:600;">Security</span>: OAuth2/OIDC, Azure AD B2C, IBM API Connect, TDE, Always Encrypted</p></div>
-        <div class="card"><p><span style="color:var(--ink);font-weight:600;">AI</span>: Python, AutoGen, Chainlit, LLM tooling (Ollama, LM Studio), watsonx</p></div>
+        <div class="card">
+          <p lang="en"><span style="color:var(--ink);font-weight:600;">Backend</span>: C#, .NET (8/7/6), ASP.NET Core APIs, Entity Framework, NHibernate, LINQ</p>
+          <p lang="fr"><span style="color:var(--ink);font-weight:600;">Backend</span> : C#, .NET (8/7/6), API ASP.NET Core, Entity Framework, NHibernate, LINQ</p>
+        </div>
+        <div class="card">
+          <p lang="en"><span style="color:var(--ink);font-weight:600;">Data</span>: SQL Server, Azure SQL, PostgreSQL, MongoDB</p>
+          <p lang="fr"><span style="color:var(--ink);font-weight:600;">Données</span> : SQL Server, Azure SQL, PostgreSQL, MongoDB</p>
+        </div>
+        <div class="card">
+          <p lang="en"><span style="color:var(--ink);font-weight:600;">Architecture</span>: Microservices, event‑driven patterns, domain‑driven design, API‑led integration</p>
+          <p lang="fr"><span style="color:var(--ink);font-weight:600;">Architecture</span> : microservices, modèles orientés événements, conception orientée domaine, intégration pilotée par API</p>
+        </div>
+        <div class="card">
+          <p lang="en"><span style="color:var(--ink);font-weight:600;">DevOps</span>: Azure DevOps, CI/CD (YAML), Git, Docker, Linux</p>
+          <p lang="fr"><span style="color:var(--ink);font-weight:600;">DevOps</span> : Azure DevOps, CI/CD (YAML), Git, Docker, Linux</p>
+        </div>
+        <div class="card">
+          <p lang="en"><span style="color:var(--ink);font-weight:600;">Security</span>: OAuth2/OIDC, Azure AD B2C, IBM API Connect, TDE, Always Encrypted</p>
+          <p lang="fr"><span style="color:var(--ink);font-weight:600;">Sécurité</span> : OAuth2/OIDC, Azure AD B2C, IBM API Connect, TDE, Always Encrypted</p>
+        </div>
+        <div class="card">
+          <p lang="en"><span style="color:var(--ink);font-weight:600;">AI</span>: Python, AutoGen, Chainlit, LLM tooling (Ollama, LM Studio), watsonx</p>
+          <p lang="fr"><span style="color:var(--ink);font-weight:600;">IA</span> : Python, AutoGen, Chainlit, outils LLM (Ollama, LM Studio), watsonx</p>
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>Experience (selected)</h2>
+      <h2 lang="en">Experience (selected)</h2>
+      <h2 lang="fr">Expérience (sélection)</h2>
 
       <div class="role">
-        <h3>Senior Full‑Stack Developer / AI Oriented</h3>
-        <p class="org">LGS/IBM • Aug 2025</p>
-        <ul>
+        <h3 lang="en">Senior Full‑Stack Developer / AI Oriented</h3>
+        <h3 lang="fr">Développeur Full‑Stack Senior / Orienté IA</h3>
+        <p class="org" lang="en">LGS/IBM • Aug 2025</p>
+        <p class="org" lang="fr">LGS / IBM • Août 2025</p>
+        <ul lang="en">
           <li>Build React UI components for Chainlit solutions and contribute to architecture discussions.</li>
           <li>Implement backend AI logic in Python for an internal Dynamic Resume solution.</li>
         </ul>
+        <ul lang="fr">
+          <li>Conception de composants d'interface React pour des solutions Chainlit et participation aux discussions d'architecture.</li>
+          <li>Implémentation de la logique IA backend en Python pour une solution interne de CV dynamique.</li>
+        </ul>
       </div>
 
       <div class="role">
-        <h3>Senior Full‑Stack Developer (PGGAPI / API‑Led Integration)</h3>
-        <p class="org">LGS, Ministry of Cybersecurity • Oct 2024 – Jul 2025</p>
-        <ul>
+        <h3 lang="en">Senior Full‑Stack Developer (PGGAPI / API‑Led Integration)</h3>
+        <h3 lang="fr">Développeur Full‑Stack Senior (PGGAPI / Intégration pilotée par API)</h3>
+        <p class="org" lang="en">LGS, Ministry of Cybersecurity • Oct 2024 – Jul 2025</p>
+        <p class="org" lang="fr">LGS, Ministère de la Cybersécurité • Oct. 2024 – Juil. 2025</p>
+        <ul lang="en">
           <li>Customized IBM API Connect developer portal and automated operations via CLI and YAML pipelines.</li>
           <li>Developed Python tools for analytics extraction (CloudWatch and API Connect Analytics) and supported clients via ServiceNow.</li>
         </ul>
-      </div>
-
-      <div class="role">
-        <h3>Full‑Stack .NET Developer → Interim Team Lead</h3>
-        <p class="org">LGS / iA Financial Group • Jun 2023 – Oct 2023</p>
-        <ul>
-          <li>Modernized a monolith into .NET Core microservices, added OpenTelemetry, and containerized services with Docker.</li>
-          <li>Led code reviews, supported QA, and coordinated backend–frontend integration with the React team.</li>
+        <ul lang="fr">
+          <li>Personnalisation du portail développeur IBM API Connect et automatisation des opérations via CLI et pipelines YAML.</li>
+          <li>Développement d'outils Python pour l'extraction de données analytiques (CloudWatch et API Connect Analytics) et soutien aux clients via ServiceNow.</li>
         </ul>
       </div>
 
       <div class="role">
-        <h3>Programmer Analyst</h3>
-        <p class="org">SYSTEMATIX / GAA • Dec 2019 – Jun 2023</p>
-        <ul>
+        <h3 lang="en">Full‑Stack .NET Developer → Interim Team Lead</h3>
+        <h3 lang="fr">Développeur Full‑Stack .NET → Chef d'équipe par intérim</h3>
+        <p class="org" lang="en">LGS / iA Financial Group • Jun 2023 – Oct 2023</p>
+        <p class="org" lang="fr">LGS / Groupe Financier iA • Juin 2023 – Oct. 2023</p>
+        <ul lang="en">
+          <li>Modernized a monolith into .NET Core microservices, added OpenTelemetry, and containerized services with Docker.</li>
+          <li>Led code reviews, supported QA, and coordinated backend–frontend integration with the React team.</li>
+        </ul>
+        <ul lang="fr">
+          <li>Modernisation d'un monolithe en microservices .NET Core, ajout d'OpenTelemetry et mise en conteneurs avec Docker.</li>
+          <li>Animation des revues de code, soutien à l'équipe QA et coordination de l'intégration backend–frontend avec l'équipe React.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3 lang="en">Programmer Analyst</h3>
+        <h3 lang="fr">Analyste-programmeur</h3>
+        <p class="org" lang="en">SYSTEMATIX / GAA • Dec 2019 – Jun 2023</p>
+        <p class="org" lang="fr">SYSTEMATIX / GAA • Déc. 2019 – Juin 2023</p>
+        <ul lang="en">
           <li>Implemented security hardening including Always Encrypted and TDE across environments, plus CI/CD improvements.</li>
           <li>Supported production operations for an auto‑claims system used across Quebec insurers.</li>
+        </ul>
+        <ul lang="fr">
+          <li>Mise en place de mesures de sécurité avancées (Always Encrypted, TDE) sur tous les environnements et amélioration des pipelines CI/CD.</li>
+          <li>Soutien aux opérations de production d'un système de réclamations automobiles utilisé par les assureurs du Québec.</li>
         </ul>
       </div>
     </section>
@@ -474,26 +569,36 @@
          PERSONAL PROJECTS — NEW SECTION
          ============================================= -->
     <section id="projects">
-      <h2>Personal Projects</h2>
+      <h2 lang="en">Personal Projects</h2>
+      <h2 lang="fr">Projets personnels</h2>
 
       <div class="project-card">
         <div class="project-badge">
           <!-- Shield/check icon -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><path d="M9 12l2 2 4-4"/></svg>
-          Personal Project
+          <span lang="en">Personal Project</span>
+          <span lang="fr">Projet personnel</span>
         </div>
 
-        <h3>Piste — Agentic Fact-Checking Pipeline for Political Discourse</h3>
+        <h3 lang="en">Piste — Agentic Fact-Checking Pipeline for Political Discourse</h3>
+        <h3 lang="fr">Piste — Pipeline agentique de vérification des faits politiques</h3>
 
-        <p>
+        <p lang="en">
           <strong>Piste</strong> (French for "trail") is an end-to-end <strong>agentic AI pipeline</strong> that
           fact-checks political claims and leaves a complete, replayable forensic audit trail behind every verdict.
           It is configured out of the box to fact-check <strong>Québec political discourse in French</strong> and
           <strong>Canadian federal political discourse in English</strong>, with a fully bilingual EN/FR flow across
           the UI, pipeline stages, retrieved sources, verdict labels, and natural-language explanations.
         </p>
+        <p lang="fr">
+          <strong>Piste</strong> est un <strong>pipeline d'IA agentique</strong> de bout en bout qui vérifie
+          les affirmations politiques et laisse derrière chaque verdict une piste d'audit complète et rejouable.
+          Le pipeline est configuré dès le départ pour vérifier le <strong>discours politique québécois en français</strong>
+          et le <strong>discours politique fédéral canadien en anglais</strong>, avec un fonctionnement entièrement bilingue
+          (EN/FR) dans l'interface, les étapes du pipeline, les sources récupérées, les verdicts et les explications.
+        </p>
 
-        <p>
+        <p lang="en">
           The pipeline runs as four cooperating agent stages — check-worthiness and atomic claim decomposition,
           <strong>blind</strong> multi-provider web retrieval (the retriever never sees the original claim, eliminating
           confirmation bias by design), per-source classification executed concurrently, and a 7-way
@@ -501,14 +606,29 @@
           Every agent call, every source, and every classification is written to an <strong>append-only audit ledger</strong>
           in PostgreSQL, so any historical verdict can be replayed and compared side-by-side against the current pipeline.
         </p>
+        <p lang="fr">
+          Le pipeline fonctionne en quatre étapes d'agents qui coopèrent : évaluation de la vérifiabilité et décomposition
+          de l'affirmation en parties atomiques, recherche web <strong>aveugle</strong> auprès de plusieurs fournisseurs
+          (le moteur de recherche ne voit jamais l'affirmation d'origine, ce qui élimine le biais de confirmation par conception),
+          classification de chaque source en parallèle, puis agrégation du verdict sur une échelle de 7 niveaux
+          alignée sur PolitiFact, avec un filtre de criticité pour les affirmations sensibles.
+          Chaque appel d'agent, chaque source et chaque classification est inscrit dans un <strong>registre d'audit en
+          ajout seul</strong> dans PostgreSQL : tout verdict passé peut être rejoué et comparé côte à côte avec le pipeline actuel.
+        </p>
 
         <div class="project-tags">
-          <span class="project-tag t1">Agentic AI</span>
-          <span class="project-tag t2">Fact-Checking Pipeline</span>
-          <span class="project-tag t3">Bilingual EN / FR</span>
-          <span class="project-tag t4">Québec &amp; Canada Politics</span>
-          <span class="project-tag t5">Blind Retrieval</span>
-          <span class="project-tag t6">Immutable Audit Trail</span>
+          <span class="project-tag t1" lang="en">Agentic AI</span>
+          <span class="project-tag t1" lang="fr">IA agentique</span>
+          <span class="project-tag t2" lang="en">Fact-Checking Pipeline</span>
+          <span class="project-tag t2" lang="fr">Pipeline de vérification</span>
+          <span class="project-tag t3" lang="en">Bilingual EN / FR</span>
+          <span class="project-tag t3" lang="fr">Bilingue EN / FR</span>
+          <span class="project-tag t4" lang="en">Québec &amp; Canada Politics</span>
+          <span class="project-tag t4" lang="fr">Politique Québec &amp; Canada</span>
+          <span class="project-tag t5" lang="en">Blind Retrieval</span>
+          <span class="project-tag t5" lang="fr">Recherche aveugle</span>
+          <span class="project-tag t6" lang="en">Immutable Audit Trail</span>
+          <span class="project-tag t6" lang="fr">Piste d'audit immuable</span>
           <span class="project-tag t1">FastAPI</span>
           <span class="project-tag t2">PostgreSQL</span>
         </div>
@@ -517,7 +637,8 @@
            href="https://github.com/jinan-kordab/piste"
            target="_blank"
            rel="noopener noreferrer">
-          Explore the project on GitHub
+          <span lang="en">Explore the project on GitHub</span>
+          <span lang="fr">Voir le projet sur GitHub</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -526,35 +647,51 @@
         <div class="project-badge">
           <!-- Plane icon -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19 4s-2 2-3.5 3.5L7 5.3l-1.9 1.9 7.1 3.4L9.5 14 8 14l-2 2 3.5.5.5 3.5L12 18l0-1.5 3.7-2.7 3.4 7.1z"/></svg>
-          Personal Project
+          <span lang="en">Personal Project</span>
+          <span lang="fr">Projet personnel</span>
         </div>
 
-        <h3>Aviation Work Order — Intelligent Automation Pipeline</h3>
+        <h3 lang="en">Aviation Work Order — Intelligent Automation Pipeline</h3>
+        <h3 lang="fr">Ordre de travail aéronautique — Pipeline d'automatisation intelligente</h3>
 
-        <p>
+        <p lang="en">
           A live, interactive architecture diagram showcasing an end-to-end <strong>Agentic AI pipeline</strong> applied to
           aviation work order automation. Designed to demonstrate applied skills in autonomous agent design,
           multi-agent orchestration, LLM workflow integration, intelligent decision routing,
           and AIOps/DevOps automation — mapping how AI agents collaborate to handle, triage,
           and resolve complex aviation maintenance operations without human intervention.
         </p>
+        <p lang="fr">
+          Un diagramme d'architecture interactif qui présente un <strong>pipeline d'IA agentique</strong> de bout en bout
+          appliqué à l'automatisation des ordres de travail en aéronautique. Il met en valeur la conception d'agents autonomes,
+          l'orchestration multi-agents, l'intégration de flux LLM, le routage intelligent des décisions et l'automatisation
+          AIOps / DevOps. Le diagramme montre comment les agents collaborent pour traiter, trier et résoudre des opérations
+          de maintenance aéronautique complexes sans intervention humaine.
+        </p>
 
         <div class="project-tags">
-          <span class="project-tag t1">Agentic AI</span>
-          <span class="project-tag t2">Multi-Agent Orchestration</span>
-          <span class="project-tag t3">LLM Integration</span>
+          <span class="project-tag t1" lang="en">Agentic AI</span>
+          <span class="project-tag t1" lang="fr">IA agentique</span>
+          <span class="project-tag t2" lang="en">Multi-Agent Orchestration</span>
+          <span class="project-tag t2" lang="fr">Orchestration multi-agents</span>
+          <span class="project-tag t3" lang="en">LLM Integration</span>
+          <span class="project-tag t3" lang="fr">Intégration LLM</span>
           <span class="project-tag t4">AIOps</span>
-          <span class="project-tag t5">Aviation / MRO</span>
-          <span class="project-tag t6">Intelligent Workflow Automation</span>
+          <span class="project-tag t5" lang="en">Aviation / MRO</span>
+          <span class="project-tag t5" lang="fr">Aéronautique / MRO</span>
+          <span class="project-tag t6" lang="en">Intelligent Workflow Automation</span>
+          <span class="project-tag t6" lang="fr">Automatisation intelligente</span>
           <span class="project-tag t1">DevOps</span>
-          <span class="project-tag t2">AI Architecture</span>
+          <span class="project-tag t2" lang="en">AI Architecture</span>
+          <span class="project-tag t2" lang="fr">Architecture IA</span>
         </div>
 
         <a class="project-cta"
            href="https://jinan-kordab.github.io/AIOps/"
            target="_blank"
            rel="noopener noreferrer">
-          Explore the live diagram
+          <span lang="en">Explore the live diagram</span>
+          <span lang="fr">Découvrir le diagramme interactif</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -563,12 +700,14 @@
         <div class="project-badge">
           <!-- Database/replay icon -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
-          Personal Project
+          <span lang="en">Personal Project</span>
+          <span lang="fr">Projet personnel</span>
         </div>
 
-        <h3>Replay Platform — Payroll &amp; HR Migration Architecture</h3>
+        <h3 lang="en">Replay Platform — Payroll &amp; HR Migration Architecture</h3>
+        <h3 lang="fr">Plateforme Replay — Architecture de migration paie &amp; RH</h3>
 
-        <p>
+        <p lang="en">
           A seven-stage interactive scroll journey through the <strong>Replay Platform</strong> — a compliance-ready,
           event-native migration architecture for legacy payroll, people, and time &amp; attendance systems.
           The design demonstrates CDC ingestion, canonical schema mapping, and a permanent
@@ -576,38 +715,57 @@
           cross-product compliance continuity into a modernised V2 operating model.
           Built on a strangler-fig migration pattern with full end-to-end observability baked in by design.
         </p>
+        <p lang="fr">
+          Un parcours interactif en sept étapes à travers la <strong>plateforme Replay</strong> : une architecture
+          de migration prête pour la conformité, nativement orientée événements, pour les anciens systèmes de paie,
+          de gestion du personnel et de temps &amp; présences. La conception illustre l'ingestion CDC, la mise en
+          correspondance de schémas canoniques et un <strong>moteur Replay</strong> permanent qui garantit des
+          pistes d'audit immuables, des corrections sûres et une continuité de conformité entre produits vers un
+          modèle opérationnel V2 modernisé. Construite selon le modèle de migration « strangler-fig », avec une
+          observabilité complète de bout en bout intégrée dès la conception.
+        </p>
 
         <div class="project-tags">
-          <span class="project-tag t1">Event Sourcing</span>
-          <span class="project-tag t2">CDC Ingestion</span>
-          <span class="project-tag t3">Compliance Architecture</span>
-          <span class="project-tag t4">Payroll &amp; HR</span>
-          <span class="project-tag t5">Strangler-Fig Pattern</span>
-          <span class="project-tag t6">Audit &amp; Observability</span>
+          <span class="project-tag t1" lang="en">Event Sourcing</span>
+          <span class="project-tag t1" lang="fr">Event Sourcing</span>
+          <span class="project-tag t2" lang="en">CDC Ingestion</span>
+          <span class="project-tag t2" lang="fr">Ingestion CDC</span>
+          <span class="project-tag t3" lang="en">Compliance Architecture</span>
+          <span class="project-tag t3" lang="fr">Architecture de conformité</span>
+          <span class="project-tag t4" lang="en">Payroll &amp; HR</span>
+          <span class="project-tag t4" lang="fr">Paie &amp; RH</span>
+          <span class="project-tag t5" lang="en">Strangler-Fig Pattern</span>
+          <span class="project-tag t5" lang="fr">Modèle Strangler-Fig</span>
+          <span class="project-tag t6" lang="en">Audit &amp; Observability</span>
+          <span class="project-tag t6" lang="fr">Audit &amp; observabilité</span>
           <span class="project-tag t1">Azure</span>
-          <span class="project-tag t2">Migration Architecture</span>
+          <span class="project-tag t2" lang="en">Migration Architecture</span>
+          <span class="project-tag t2" lang="fr">Architecture de migration</span>
         </div>
 
         <a class="project-cta"
            href="https://jinan-kordab.github.io/replay-architecture/"
            target="_blank"
            rel="noopener noreferrer">
-          Explore the architecture
+          <span lang="en">Explore the architecture</span>
+          <span lang="fr">Découvrir l'architecture</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </section>
 
     <section id="certifications">
-      <h2>Notable certifications</h2>
+      <h2 lang="en">Notable certifications</h2>
+      <h2 lang="fr">Certifications notables</h2>
       <div class="grid grid-3">
         <div class="card cert-card">
           <div class="cert-media">
             <img src="images/IBM Generative & Agentic AI Data Scientist.png" alt="IBM Generative &amp; Agentic AI Data Scientist badge" />
           </div>
           <div class="cert-title">IBM Generative &amp; Agentic AI Data Scientist</div>
-          <p class="cert-desc">Credly credential page (details + verification).</p>
-          <a class="cert-link" href="https://www.credly.com/badges/7847f6cd-3279-4f71-a5cd-78e39b8a7a13" target="_blank" rel="noreferrer">View credential</a>
+          <p class="cert-desc" lang="en">Credly credential page (details + verification).</p>
+          <p class="cert-desc" lang="fr">Page Credly du certificat (détails + vérification).</p>
+          <a class="cert-link" href="https://www.credly.com/badges/7847f6cd-3279-4f71-a5cd-78e39b8a7a13" target="_blank" rel="noreferrer"><span lang="en">View credential</span><span lang="fr">Voir le certificat</span></a>
         </div>
 
         <div class="card cert-card">
@@ -615,8 +773,9 @@
             <img src="images/IBM API Connect 10 Developer.png" alt="IBM API Connect 10 Developer badge" />
           </div>
           <div class="cert-title">IBM API Connect 10 Developer</div>
-          <p class="cert-desc">Credly credential page (details + verification).</p>
-          <a class="cert-link" href="https://www.credly.com/badges/f5460904-0c76-4114-a1f9-3cf80c2f9b38" target="_blank" rel="noreferrer">View credential</a>
+          <p class="cert-desc" lang="en">Credly credential page (details + verification).</p>
+          <p class="cert-desc" lang="fr">Page Credly du certificat (détails + vérification).</p>
+          <a class="cert-link" href="https://www.credly.com/badges/f5460904-0c76-4114-a1f9-3cf80c2f9b38" target="_blank" rel="noreferrer"><span lang="en">View credential</span><span lang="fr">Voir le certificat</span></a>
         </div>
 
         <div class="card cert-card">
@@ -624,8 +783,9 @@
             <img src="images/ibm machine learning speacialist professional.png" alt="IBM Machine Learning Specialist - Professional badge" />
           </div>
           <div class="cert-title">IBM Machine Learning Specialist - Professional</div>
-          <p class="cert-desc">Credly credential page (details + verification).</p>
-          <a class="cert-link" href="https://www.credly.com/badges/071dd62d-7312-4fbd-926b-643b839f4a55/" target="_blank" rel="noreferrer">View credential</a>
+          <p class="cert-desc" lang="en">Credly credential page (details + verification).</p>
+          <p class="cert-desc" lang="fr">Page Credly du certificat (détails + vérification).</p>
+          <a class="cert-link" href="https://www.credly.com/badges/071dd62d-7312-4fbd-926b-643b839f4a55/" target="_blank" rel="noreferrer"><span lang="en">View credential</span><span lang="fr">Voir le certificat</span></a>
         </div>
 
         <div class="card cert-card">
@@ -633,38 +793,74 @@
             <img src="images/IBM AI Associate Data Scientist.png" alt="IBM AI Associate Data Scientist badge" />
           </div>
           <div class="cert-title">IBM AI Associate Data Scientist</div>
-          <p class="cert-desc">Credly credential page (details + verification).</p>
-          <a class="cert-link" href="https://www.credly.com/badges/3ffdd1af-f17f-49fd-835d-fea6e8097cc2/" target="_blank" rel="noreferrer">View credential</a>
+          <p class="cert-desc" lang="en">Credly credential page (details + verification).</p>
+          <p class="cert-desc" lang="fr">Page Credly du certificat (détails + vérification).</p>
+          <a class="cert-link" href="https://www.credly.com/badges/3ffdd1af-f17f-49fd-835d-fea6e8097cc2/" target="_blank" rel="noreferrer"><span lang="en">View credential</span><span lang="fr">Voir le certificat</span></a>
         </div>
       </div>
     </section>
 
     <section class="links">
-      <h2>Writing & Profiles</h2>
-      <ul>
+      <h2 lang="en">Writing &amp; Profiles</h2>
+      <h2 lang="fr">Écrits &amp; profils</h2>
+      <ul lang="en">
         <li><a href="https://community.ibm.com/community/user/ai-datascience/blogs/jinan-kordab/2024/04/04/exploring-the-integration-of-generative-ai-in-podc" target="_blank" rel="noreferrer">Exploring the Integration of Generative AI in Podcasting with watsonx</a></li>
         <li><a href="https://thoughtsonprogramming.wordpress.com/" target="_blank" rel="noreferrer">Blog: Thoughts on Programming</a></li>
         <li><a href="https://www.kaggle.com/jinankordab/code" target="_blank" rel="noreferrer">Kaggle notebooks</a></li>
         <li><a href="https://www.linkedin.com/pulse/meeting-to-action-agent-turning-meetings-results-jinan-kordab-o3ree/" target="_blank" rel="noreferrer">LinkedIn article: Meeting‑to‑Action Agent (Turning Meetings into Results)</a></li>
       </ul>
+      <ul lang="fr">
+        <li><a href="https://community.ibm.com/community/user/ai-datascience/blogs/jinan-kordab/2024/04/04/exploring-the-integration-of-generative-ai-in-podc" target="_blank" rel="noreferrer">Intégrer l'IA générative dans la baladodiffusion avec watsonx</a></li>
+        <li><a href="https://thoughtsonprogramming.wordpress.com/" target="_blank" rel="noreferrer">Blogue : Thoughts on Programming</a></li>
+        <li><a href="https://www.kaggle.com/jinankordab/code" target="_blank" rel="noreferrer">Carnets Kaggle</a></li>
+        <li><a href="https://www.linkedin.com/pulse/meeting-to-action-agent-turning-meetings-results-jinan-kordab-o3ree/" target="_blank" rel="noreferrer">Article LinkedIn : Agent Réunion-vers-Action (transformer les réunions en résultats)</a></li>
+      </ul>
     </section>
 
     <section>
-      <h2>Featured LinkedIn post</h2>
+      <h2 lang="en">Featured LinkedIn post</h2>
+      <h2 lang="fr">Publication LinkedIn en vedette</h2>
       <a class="featured-post" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7359310301973868544" target="_blank" rel="noreferrer">
         <div class="fp-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="currentColor"/></svg>
         </div>
         <div class="fp-text">
-          <span class="fp-label">Featured Post on LinkedIn</span>
-          <span class="fp-cta">View Post &rarr;</span>
+          <span class="fp-label" lang="en">Featured Post on LinkedIn</span>
+          <span class="fp-label" lang="fr">Publication en vedette sur LinkedIn</span>
+          <span class="fp-cta" lang="en">View Post &rarr;</span>
+          <span class="fp-cta" lang="fr">Voir la publication &rarr;</span>
         </div>
       </a>
     </section>
 
     <footer>
-      <div>© 2026 Jinan Kordab</div>
+      <div lang="en">© 2026 Jinan Kordab</div>
+      <div lang="fr">© 2026 Jinan Kordab — Tous droits réservés.</div>
     </footer>
   </div>
+
+  <script>
+    (function(){
+      var btns = document.querySelectorAll('.lang-toggle button');
+      var titles = {
+        en: 'Jinan Kordab | Senior Full‑Stack Developer',
+        fr: 'Jinan Kordab | Développeur Full‑Stack Senior'
+      };
+      function setLang(l){
+        document.documentElement.setAttribute('data-lang', l);
+        document.documentElement.setAttribute('lang', l);
+        try { localStorage.setItem('lang', l); } catch(e){}
+        document.title = titles[l] || titles.en;
+        btns.forEach(function(b){
+          b.classList.toggle('active', b.getAttribute('data-lang') === l);
+        });
+      }
+      btns.forEach(function(b){
+        b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
+      });
+      var current = document.documentElement.getAttribute('data-lang') || 'en';
+      setLang(current);
+    })();
+  </script>
 </body>
 </html>
