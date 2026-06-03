@@ -586,18 +586,19 @@
         <h3 lang="fr">Precis — Pipeline agentique de recherche documentaire hybride</h3>
 
         <p lang="en">
-          A full-stack RAG pipeline built on a <strong>radically different architecture</strong>: the LLM is only
-          used for the final writing step. Every other stage — document retrieval, relevance ranking, quality evaluation,
-          safety filtering — runs on <strong>deterministic, non-LLM algorithms</strong>. This means the pipeline
-          <strong>cannot hallucinate on its own</strong>; the LLM writes from documents the system has already found
-          and verified.
+          A full-stack RAG pipeline built on a <strong>radically different architecture</strong>: the LLM is confined
+          to two responsibilities — reasoning about the query at the planning stage, and composing the final answer.
+          Every other stage — document retrieval, relevance ranking, quality evaluation, safety filtering — runs on
+          <strong>deterministic, non-LLM algorithms</strong>. This means the pipeline <strong>cannot hallucinate
+          on its own</strong>; retrieval, verification, and safety are handled by the pipeline, not the LLM.
         </p>
         <p lang="fr">
-          Un pipeline RAG full-stack fondé sur une <strong>architecture radicalement différente</strong> : le LLM
-          n'intervient qu'à l'étape finale de rédaction. Toutes les autres étapes — recherche documentaire, classement
-          par pertinence, évaluation de la qualité, filtres de sécurité — utilisent des <strong>algorithmes déterministes
-          sans LLM</strong>. Résultat : le pipeline <strong>ne peut pas halluciner par lui-même</strong> ; le LLM rédige
-          à partir de documents déjà trouvés et vérifiés par le système.
+          Un pipeline RAG full-stack fondé sur une <strong>architecture radicalement différente</strong> : le LLM est
+          confiné à deux responsabilités — raisonner sur la requête à l'étape de planification, et rédiger la réponse
+          finale. Toutes les autres étapes — recherche documentaire, classement par pertinence, évaluation de la qualité,
+          filtres de sécurité — utilisent des <strong>algorithmes déterministes sans LLM</strong>. Résultat : le pipeline
+          <strong>ne peut pas halluciner par lui-même</strong> ; la recherche, la vérification et la sécurité sont gérées
+          par le pipeline, pas par le LLM.
         </p>
 
         <p lang="en">
