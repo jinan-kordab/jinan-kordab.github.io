@@ -576,6 +576,80 @@
 
       <div class="project-card">
         <div class="project-badge">
+          <!-- Search/hash icon -->
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span lang="en">Personal Project</span>
+          <span lang="fr">Projet personnel</span>
+        </div>
+
+        <h3 lang="en">Precis — AI Hybrid Agentic Retrieval Pipeline</h3>
+        <h3 lang="fr">Precis — Pipeline agentique de recherche documentaire hybride</h3>
+
+        <p lang="en">
+          A full-stack RAG pipeline built on a <strong>radically different architecture</strong>: the LLM is only
+          used for the final writing step. Every other stage — document retrieval, relevance ranking, quality evaluation,
+          safety filtering — runs on <strong>deterministic, non-LLM algorithms</strong>. This means the pipeline
+          <strong>cannot hallucinate on its own</strong>; the LLM writes from documents the system has already found
+          and verified.
+        </p>
+        <p lang="fr">
+          Un pipeline RAG full-stack fondé sur une <strong>architecture radicalement différente</strong> : le LLM
+          n'intervient qu'à l'étape finale de rédaction. Toutes les autres étapes — recherche documentaire, classement
+          par pertinence, évaluation de la qualité, filtres de sécurité — utilisent des <strong>algorithmes déterministes
+          sans LLM</strong>. Résultat : le pipeline <strong>ne peut pas halluciner par lui-même</strong> ; le LLM rédige
+          à partir de documents déjà trouvés et vérifiés par le système.
+        </p>
+
+        <p lang="en">
+          <strong>Key differentiators:</strong> Dual retrieval — deterministic hash lookup (96% accuracy, no embeddings,
+          no GPU) runs in parallel with FAISS vector search, fused via Reciprocal Rank Fusion. 14 specialized agents
+          orchestrated by a Planner→Router with parallel execution. Every answer is auto-graded on 5 quality dimensions
+          (relevancy, trust, completeness, hallucination, citations), then passed through 3 safety filters (PII redaction,
+          prompt-injection blocking, hallucination cutoff). Full JSON audit trail for every decision. Training-free
+          statistical agents (RBF predictor, synthetic data generator, anomaly detector). Built on Windows without Docker —
+          one-click batch scripts for everything.
+        </p>
+        <p lang="fr">
+          <strong>Différenciateurs clés :</strong> Double recherche — hachage déterministe (96 % de précision, sans
+          embeddings ni GPU) en parallèle avec la recherche vectorielle FAISS, fusionnées par Reciprocal Rank Fusion.
+          14 agents spécialisés orchestrés par un Planner→Router avec exécution parallèle. Chaque réponse est notée
+          automatiquement sur 5 axes (pertinence, fiabilité, exhaustivité, hallucinations, citations), puis filtrée par
+          3 couches de sécurité (anonymisation PII, blocage d'injection, seuil d'hallucination). Piste d'audit JSON
+          complète pour chaque décision. Agents statistiques sans entraînement (prédicteur RBF, générateur de données
+          synthétiques, détecteur d'anomalies). Fonctionne sous Windows sans Docker — scripts batch en un clic.
+        </p>
+
+        <div class="project-tags">
+          <span class="project-tag t1" lang="en">Agentic AI Pipeline</span>
+          <span class="project-tag t1" lang="fr">Pipeline IA agentique</span>
+          <span class="project-tag t2" lang="en">Hybrid Retrieval (Hash + Vector)</span>
+          <span class="project-tag t2" lang="fr">Recherche hybride (Hash + Vectoriel)</span>
+          <span class="project-tag t3" lang="en">Multi-Agent Orchestration</span>
+          <span class="project-tag t3" lang="fr">Orchestration multi-agents</span>
+          <span class="project-tag t4" lang="en">LLM-Free Core Pipeline</span>
+          <span class="project-tag t4" lang="fr">Pipeline cœur sans LLM</span>
+          <span class="project-tag t5" lang="en">Self-Evaluating (5-dim)</span>
+          <span class="project-tag t5" lang="fr">Auto-évaluation (5 axes)</span>
+          <span class="project-tag t6" lang="en">96% Retrieval Accuracy</span>
+          <span class="project-tag t6" lang="fr">96 % précision de recherche</span>
+          <span class="project-tag t1">FastAPI</span>
+          <span class="project-tag t2">Next.js</span>
+          <span class="project-tag t3" lang="en">Windows-Native</span>
+          <span class="project-tag t3" lang="fr">Windows natif</span>
+        </div>
+
+        <a class="project-cta"
+           href="https://github.com/jinan-kordab/precis-agentic-pipeline"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span lang="en">Explore the project on GitHub</span>
+          <span lang="fr">Voir le projet sur GitHub</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-badge">
           <!-- Shield/check icon -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><path d="M9 12l2 2 4-4"/></svg>
           <span lang="en">Personal Project</span>
