@@ -576,6 +576,83 @@
 
       <div class="project-card">
         <div class="project-badge">
+          <!-- Pipe/document icon -->
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+          <span lang="en">Personal Project &amp; Published npm Package</span>
+          <span lang="fr">Projet personnel &amp; paquet npm publié</span>
+        </div>
+
+        <h3 lang="en">DeepPipe — Document Ingestion &amp; AI Search Engine</h3>
+        <h3 lang="fr">DeepPipe — Moteur d'ingestion de documents &amp; recherche IA</h3>
+
+        <p lang="en">
+          A self-contained <strong>document search &amp; grounded AI chat engine written in pure TypeScript</strong> —
+          no FAISS, no embeddings, no vector database, no Python services. Ingests PDF, Office, HTML and email with
+          <strong>in-house parsers built from scratch</strong>, indexes into a single local SQLite FTS5 file, and answers
+          keyword search and natural-language questions with <strong>cited, source-traceable</strong> results.
+        </p>
+        <p lang="fr">
+          Un <strong>moteur autonome de recherche documentaire et de chat IA ancré, écrit entièrement en TypeScript</strong> —
+          sans FAISS, sans embeddings, sans base vectorielle, sans services Python. Il ingère des fichiers PDF, Office, HTML
+          et courriels avec des <strong>analyseurs maison écrits de zéro</strong>, indexe dans un seul fichier SQLite FTS5
+          local, et répond aux recherches par mots-clés et questions en langage naturel avec des <strong>réponses citées et
+          traçables</strong> jusqu'à la source.
+        </p>
+
+        <p lang="en">
+          <strong>I authored and published the core engine as an npm package</strong> —
+          <code>@kordabjinan/deeppipe</code> — a reusable, dependency-light library anyone can build on.
+          Deterministic BM25 lexical retrieval (same input → same results), injection-safe search, and a never-throw
+          <code>Result&lt;T, E&gt;</code> contract so one malformed document can never crash a batch. Everything stays
+          local except an optional LLM call.
+        </p>
+        <p lang="fr">
+          <strong>J'ai conçu et publié le moteur central sous forme de paquet npm</strong> —
+          <code>@kordabjinan/deeppipe</code> — une bibliothèque réutilisable et légère sur laquelle chacun peut bâtir.
+          Recherche lexicale BM25 déterministe (même entrée → mêmes résultats), recherche à l'épreuve des injections, et un
+          contrat <code>Result&lt;T, E&gt;</code> sans exception : un document corrompu ne peut jamais faire planter un lot.
+          Tout reste local, sauf un appel LLM optionnel.
+        </p>
+
+        <div class="project-tags">
+          <span class="project-tag t1" lang="en">Published npm Package</span>
+          <span class="project-tag t1" lang="fr">Paquet npm publié</span>
+          <span class="project-tag t2">Pure TypeScript</span>
+          <span class="project-tag t3" lang="en">BM25 Lexical Search</span>
+          <span class="project-tag t3" lang="fr">Recherche lexicale BM25</span>
+          <span class="project-tag t4" lang="en">No Embeddings / No FAISS</span>
+          <span class="project-tag t4" lang="fr">Sans embeddings / sans FAISS</span>
+          <span class="project-tag t5" lang="en">In-House Document Parsers</span>
+          <span class="project-tag t5" lang="fr">Analyseurs maison</span>
+          <span class="project-tag t6" lang="en">Grounded RAG + Citations</span>
+          <span class="project-tag t6" lang="fr">RAG ancré + citations</span>
+          <span class="project-tag t2">SQLite FTS5</span>
+          <span class="project-tag t3" lang="en">Local &amp; Private</span>
+          <span class="project-tag t3" lang="fr">Local &amp; privé</span>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <a class="project-cta"
+             href="https://github.com/jinan-kordab/DeepPipe"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span lang="en">View on GitHub</span>
+            <span lang="fr">Voir sur GitHub</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="project-cta"
+             href="https://www.npmjs.com/package/@kordabjinan/deeppipe"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span lang="en">Get the npm package</span>
+            <span lang="fr">Obtenir le paquet npm</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-badge">
           <!-- Search/hash icon -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <span lang="en">Personal Project</span>
